@@ -81,6 +81,15 @@ public:
             cout << juego.nombre << " (" << juego.añoLanzamiento << ")" << endl;
         }
     }
+    void agregarCategoria(){
+        string nombre;
+        vector<string> categorias;
+        cout << "Ingrese el nombre del a el cual agregara o modificara su categoria videojuego: ";
+        cin >> nombre;
+        cout << "Ingrese las categorias del videojuego (separadas por comas): ";
+        string categoriasStr;
+        cin >> categoriasStr;
+    }
     // orden de juegos por su plataforma
     void mostrarJuegosPorPlataforma(const string &plataforma)
     {
@@ -125,7 +134,8 @@ public:
             cout << "3) Mostrar juegos ordenados por ano de lanzamiento" << endl;
             cout << "4) Mostrar juegos por plataforma" << endl;
             cout << "5) Mostrar juegos mas jugados" << endl;
-            cout << "6) Salir" << endl;
+            cout << "6) Modificar categoria o agregar categoria a juego " << endl;
+            cout << "7) Salir" << endl;
             cin >> opcion;
             // menu con un witch opcion para que dependienco de lo que haga el usario o la opcion que escoja
             //
@@ -150,8 +160,11 @@ public:
                 mostrarJuegosMasJugados();
                 break;
             case 6:
-                cout << "Saliendo..." << endl;
+                agregarCategoria
                 break;
+            case 7:
+                cout << "Saliendo..." << endl;
+            break;
             default:
                 cout << "Opción inválida. Intente de nuevo." << endl;
                 break;
